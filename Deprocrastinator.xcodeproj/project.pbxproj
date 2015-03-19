@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4D9D6231AB87CF800278290 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D9D6221AB87CF800278290 /* Task.m */; };
 		C4FA7FC81AB75CAD00527A7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA7FC71AB75CAD00527A7C /* main.m */; };
 		C4FA7FCB1AB75CAD00527A7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA7FCA1AB75CAD00527A7C /* AppDelegate.m */; };
 		C4FA7FCE1AB75CAD00527A7C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA7FCD1AB75CAD00527A7C /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C4D9D6211AB87CF800278290 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = ../Task.h; sourceTree = "<group>"; };
+		C4D9D6221AB87CF800278290 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = ../Task.m; sourceTree = "<group>"; };
 		C4FA7FC21AB75CAD00527A7C /* Deprocrastinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deprocrastinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4FA7FC61AB75CAD00527A7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4FA7FC71AB75CAD00527A7C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,6 +84,8 @@
 		C4FA7FC41AB75CAD00527A7C /* Deprocrastinator */ = {
 			isa = PBXGroup;
 			children = (
+				C4D9D6211AB87CF800278290 /* Task.h */,
+				C4D9D6221AB87CF800278290 /* Task.m */,
 				C4FA7FC91AB75CAD00527A7C /* AppDelegate.h */,
 				C4FA7FCA1AB75CAD00527A7C /* AppDelegate.m */,
 				C4FA7FCC1AB75CAD00527A7C /* ViewController.h */,
@@ -219,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D9D6231AB87CF800278290 /* Task.m in Sources */,
 				C4FA7FCE1AB75CAD00527A7C /* ViewController.m in Sources */,
 				C4FA7FCB1AB75CAD00527A7C /* AppDelegate.m in Sources */,
 				C4FA7FC81AB75CAD00527A7C /* main.m in Sources */,
@@ -412,6 +418,7 @@
 				C4FA7FE71AB75CAD00527A7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C4FA7FE81AB75CAD00527A7C /* Build configuration list for PBXNativeTarget "DeprocrastinatorTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +427,7 @@
 				C4FA7FEA1AB75CAD00527A7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

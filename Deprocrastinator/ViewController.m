@@ -84,7 +84,14 @@
 }
 
 
-
+/**
+ *  Setups reusuable Cell
+ *
+ *  @param tableView taskTableView
+ *  @param indexPath indexpath
+ *
+ *  @return cell
+ */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ReminderCell"];
@@ -108,32 +115,21 @@
 
 }
 
+#pragma mark - Reorder cells
 
+//Reorder in Array based upon position that it was dragged to.
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
 
-
+    NSString *taskItem = [self.taskArray objectAtIndex:sourceIndexPath.row];
+    [self.taskArray removeObject:taskItem];
+    [self.taskArray insertObject:taskItem atIndex:destinationIndexPath.row];
+    [self.taskTableView reloadData];
+}
 
 
 # pragma mark - Gesture Handler
 
-- (IBAction)onSwipe:(UISwipeGestureRecognizer *)gestureRecognizer
-{
-    // find the cell that was tapped
-    if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
-        CGPoint location = [gestureRecognizer locationInView:self.taskTableView];
-        NSIndexPath *indexPath = [self.taskTableView indexPathForRowAtPoint:location];
-        UITableViewCell *cell = [self.taskTableView cellForRowAtIndexPath:indexPath];
 
-        // if the cell exists and it has text, change its text color
-        if (cell && [cell.textLabel.text length] > 0) {
-            [self setCellTextLabelPriorityColor:cell];
-
-            // save the color in the array
-            NSIndexPath *cellIndexPath = [self.tableView indexPathForCell:cell];
-            [self.todoListBackgroundColors setObject:cell.backgroundColor atIndexedSubscript:cellIndexPath.row];
-
-        }
-    }
-}
 
 
 
